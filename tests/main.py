@@ -1,6 +1,5 @@
 
 import sys
-import html
 sys.path.append('.')
 
 import Ut3.Celcat
