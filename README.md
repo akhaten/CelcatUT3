@@ -29,3 +29,11 @@ if __name__ == '__main__':
 
     celcat_calendar.update()
 ```
+
+To build virtual env with [nix](https://nixos.org/download.html):
+
+```bash
+git clone https://github.com/akhaten/CelcatUT3.git
+cd CelcatUT3
+nix-shell env
+```
