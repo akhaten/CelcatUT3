@@ -1,8 +1,6 @@
 import html
 import re
 
-import Ut3.Url
-
 
 class Course:
 
