@@ -1,5 +1,3 @@
-# { pkgs ? import <nixpkgs> {}, ... }:
-
 let 
   
   pkgs = import <nixpkgs> {
@@ -32,7 +30,7 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    export PIP_PREFIX=$(pwd)/env/packages
+    export PIP_PREFIX=$(pwd)/venv
     export PYTHONPATH="$PIP_PREFIX/${pkgs.python310.sitePackages}:$PYTHONPATH"
     export PATH="$PIP_PREFIX/bin:$PATH"
     unset SOURCE_DATE_EPOCH
@@ -40,7 +38,3 @@ pkgs.mkShell {
 
 
 }
-
-
-
-
