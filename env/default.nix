@@ -7,7 +7,7 @@ let
 
       (self: super: {
 
-        python310Packages.pip = super.python39Packages.pip.overrideAttrs (
+        python310Packages.pip = super.python310Packages.pip.overrideAttrs (
           old : {
             src = super.fetchFromGitHub {
               owner = "pypa";
@@ -33,7 +33,7 @@ pkgs.mkShell {
 
   shellHook = ''
     export PIP_PREFIX=$(pwd)/env/packages
-    export PYTHONPATH="$PIP_PREFIX/${pkgs.python3.sitePackages}:$PYTHONPATH"
+    export PYTHONPATH="$PIP_PREFIX/${pkgs.python310.sitePackages}:$PYTHONPATH"
     export PATH="$PIP_PREFIX/bin:$PATH"
     unset SOURCE_DATE_EPOCH
   '';

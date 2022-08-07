@@ -1,4 +1,4 @@
-#!/nix/store/vzqny68wq33dcg4hkdala51n5vqhpnwc-python3-3.9.12/bin/python3.9
+#!/nix/store/40n9pd613v8fc3x39yjrgs1i7d4q8yl0-python3-3.10.4/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys
