@@ -69,7 +69,7 @@ class Datas:
     def is_group(self, s: str) -> int:
         for index in range(0, len(self.groups)):
             grp: Ut3.Utils.Group = self.groups[index]
-            if s == grp.name:
+            if (s == grp.name) or (s == grp.code):
                 return index
         return -1
 
@@ -79,6 +79,7 @@ class Datas:
             if crs.code in s:
                 return index
         return -1
+    
 
 
 datas: Datas = Datas()
@@ -234,6 +235,8 @@ class Request:
     def __make_request(group: Ut3.Utils.Group, dates: "list[datetime.date]") -> "list[dict]":
 
         response_json = []
+
+        #requests.get()
 
         for index in range(0, len(dates) - 1):
             response = requests.post(
